@@ -1,0 +1,78 @@
+<div class="container">
+    <div class="form-group">
+        <div class="col-25">
+            <label>Name</label>
+        </div>
+        <div class="col-75">
+            <input class="col-6" type="text" pInputText [(ngModel)]="registrationResponseData.Name" />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-25">
+            <label>Email</label>
+        </div>
+        <div class="col-75">
+            <input class="col-6" type="text" pInputText [(ngModel)]="registrationResponseData.Email" />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-25">
+            <label>Mobile</label>
+        </div>
+        <div class="col-75">
+            <input class="col-6" type="text" pInputText [(ngModel)]="Mobile" />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-25">
+            <label>Password</label>
+        </div>
+        <div class="col-75">
+            <input class="col-6" type="password" pInputText [(ngModel)]="registrationResponseData.Password" />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-25">
+            <label>Address</label>
+        </div>
+        <div class="col-75">
+            <input class="col-6" type="text" pInputText [(ngModel)]="registrationResponseData.Address" />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-25">
+            <label>State</label>
+        </div>
+        <div class="col-75">
+            <p-dropdown class="col-6" [options]="stateData" [(ngModel)]="state" optionLabel="stateName"
+                placeholder="Select State" (onChange)="selectCityAccordingState(state)"></p-dropdown>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-25">
+            <label>City</label>
+        </div>
+        <div class="col-75">
+            <p-dropdown class="col-6" [options]="cityAccordingState" [(ngModel)]="city" optionLabel="cityName"
+                placeholder="Select City"></p-dropdown>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-25">
+            <label>Zip code</label>
+        </div>
+        <div class="col-75">
+            <input class="col-6" type="text" pInputText [(ngModel)]="ZipCode" />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-25">
+            <label>User Type</label>
+        </div>
+        <div class="col-75">
+            <p-dropdown class="col-6" [options]="userTypeData" [(ngModel)]="userType" optionLabel="userTypeName"
+                placeholder="Select User Type"></p-dropdown>
+        </div>
+    </div>
+    <button (click)="saveRegistration()">Save</button>
+</div>

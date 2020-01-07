@@ -1,0 +1,30 @@
+<h4 style="margin: auto;">Dealer Registration Details</h4>
+<div class="container">
+    <div class="form-group">
+        <div class="col-25">
+            <label>Dealer Id/Number</label>
+        </div>
+        <div class="col-75">
+            <input class="col-6" type="text" pInputText [(ngModel)]="delRegistrationModel.DealerId" />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-25">
+            <label>Shop Id/Number</label>
+        </div>
+        <div class="col-75">
+            <input class="col-6" type="text" pInputText [(ngModel)]="delRegistrationModel.ShopId" />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-25">
+            <label>Shop Name</label>
+        </div>
+        <div class="col-75">
+            <input class="col-6" type="text" pInputText [(ngModel)]="delRegistrationModel.ShopName" />
+        </div>
+    </div>
+
+    <button (click)="saveDealerRegistration()">Save</button>
+</div>
+

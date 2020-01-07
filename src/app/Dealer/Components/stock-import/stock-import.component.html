@@ -1,0 +1,13 @@
+<input type="file" (change)="onFileChange($event)" multiple="false" />
+	<table class="sjs-table">
+		<tbody>
+      <tr *ngFor="let row of excelRows">
+			<!-- <td *ngFor="let val of row"> -->
+				<input type="text" [(ngModel)]="row" (click)="findValue($event)">
+			<!-- </td> -->
+        </tr>
+        <button (click)="saveStockData($event)">Save</button>
+    </tbody>
+	</table>
+    <button (click)="export()">Export!</button>
+    
